@@ -5,36 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MD Ainullah Partner MD Sanju - Digital Service</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'SolaimanLipi', 'Segoe UI', sans-serif;}
   body{background:#0f172a;color:#fff;}
   
-  /* Hero */
   .hero{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);padding:60px 20px;text-align:center;}
   .logo-circle{width:100px;height:100px;background:#fff;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:900;color:#6366f1;}
   .hero h1{font-size:30px;font-weight:900;}
   .hero h2{font-size:20px;color:#e0e7ff;margin:8px 0;}
-  .hero p{font-size:15px;opacity:0.9;}
+  .hero p{font-size:15px;}
   
-  /* Container */
   .container{max-width:1000px;margin:50px auto;padding:0 20px;}
   .section-title{text-align:center;font-size:28px;margin-bottom:40px;color:#a5b4fc;font-weight:800;}
   
-  /* Services Grid 3 কলাম */
-  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-  .card{background:#1e293b;border:1px solid #334155;border-radius:16px;padding:25px;transition:0.3s;display:flex;align-items:center;gap:15px;}
-  .card:hover{transform:translateY(-5px);border-color:#8b5cf6;background:#252f4a;}
-  .icon{font-size:35px;flex-shrink:0;}
-  .card h3{font-size:17px;color:#a5b4fc;margin-bottom:5px;}
-  .card p{font-size:13px;color:#cbd5e1;}
+  /* Service Card */
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;}
+  .card{background:#1e293b;border:1px solid #334155;border-radius:18px;padding:25px;transition:0.3s;}
+  .card:hover{transform:translateY(-5px);border-color:#8b5cf6;box-shadow:0 0 20px #8b5cf640;}
+  .icon{font-size:40px;margin-bottom:15px;}
+  .card h3{font-size:20px;color:#a5b4fc;margin-bottom:12px;}
+  .card p{font-size:14px;color:#cbd5e1;line-height:1.8;margin-bottom:15px;}
+  .benefit{font-size:13px;color:#86efac;margin-bottom:15px;}
   
-  /* Contact */
+  /* Order Button */
+  .order-btn{display:block;width:100%;padding:14px;background:linear-gradient(90deg,#25D366,#20ba5a);color:#fff;text-decoration:none;border-radius:12px;font-size:16px;font-weight:800;text-align:center;}
+  .order-btn:hover{opacity:0.9;transform:scale(1.02);}
+  
   .contact{text-align:center;padding:50px 20px;background:#1e293b;margin-top:50px;}
-  .btn{display:block;width:90%;max-width:400px;margin:12px auto;padding:17px;background:linear-gradient(90deg,#25D366,#20ba5a);color:#fff;text-decoration:none;border-radius:14px;font-size:18px;font-weight:800;}
-  .btn.call{background:linear-gradient(90deg,#6366f1,#8b5cf6);}
+  .main-btn{display:block;width:90%;max-width:400px;margin:12px auto;padding:17px;background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;border-radius:14px;font-size:18px;font-weight:800;}
+  .main-btn:hover{opacity:0.9;}
   
   footer{text-align:center;padding:30px;color:#64748b;font-size:14px;}
-  
-  @media(max-width:700px){.services{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -43,39 +43,13 @@
   <div class="logo-circle">DS</div>
   <h1>MD Ainullah Partner</h1>
   <h2>MD Sanju</h2>
-  <p>App Development | Facebook Boost | Digital Marketing Agency</p>
+  <p>Digital Service Agency - 2026</p>
 </div>
 
 <div class="container">
   <h2 class="section-title">আমাদের ১৫ টি প্রিমিয়াম সার্ভিস</h2>
   <div class="services">
-    <div class="card"><div class="icon">📱</div><div><h3>Android App Development</h3><p>Play Store অ্যাপ বানানো</p></div></div>
-    <div class="card"><div class="icon">🌐</div><div><h3>Website Design</h3><p>Business + E-commerce Site</p></div></div>
-    <div class="card"><div class="icon">🚀</div><div><h3>Facebook Page Boost</h3><p>Real Follower & Like</p></div></div>
-    <div class="card"><div class="icon">📈</div><div><h3>TikTok/IG Promotion</h3><p>Organic Growth</p></div></div>
-    <div class="card"><div class="icon">🎨</div><div><h3>Logo & Banner</h3><p>প্রিমিয়াম ডিজাইন</p></div></div>
-    <div class="card"><div class="icon">🎬</div><div><h3>Video Editing</h3><p>Reels, Shorts, YouTube</p></div></div>
-    <div class="card"><div class="icon">🔍</div><div><h3>SEO Service</h3><p>Google 1st Page Ranking</p></div></div>
-    <div class="card"><div class="icon">📢</div><div><h3>Facebook Ads</h3><p>Ads Campaign Setup</p></div></div>
-    <div class="card"><div class="icon">🛡️</div><div><h3>Page Recovery</h3><p>Hack ID/Page Recover</p></div></div>
-    <div class="card"><div class="icon">💻</div><div><h3>UI/UX Design</h3><p>App & Website Design</p></div></div>
-    <div class="card"><div class="icon">🤖</div><div><h3>Chatbot Setup</h3><p>Auto Reply Bot</p></div></div>
-    <div class="card"><div class="icon">📊</div><div><h3>Business Page</h3><p>Professional Setup</p></div></div>
-    <div class="card"><div class="icon">💳</div><div><h3>Payment Gateway</h3><p>bkash, Nagad Integration</p></div></div>
-    <div class="card"><div class="icon">☁️</div><div><h3>Hosting & Domain</h3><p>সাশ্রয়ী দামে</p></div></div>
-    <div class="card"><div class="icon">⭐</div><div><h3>24/7 Support</h3><p>সবসময় পাশে আছি</p></div></div>
-  </div>
-</div>
+    
+    <div class="card"><div class="icon">📱</div><h3>Android App Development</h3><p><b>কি কাজ:</b> আপনার ব্যবসার জন্য Play Store অ্যাপ বানানো।</p><p class="benefit"><b>লাভ:</b> কাস্টমার সরাসরি অ্যাপ থেকে অর্ডার দিবে। ব্র্যান্ড ভ্যালু বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি Android App বানাতে চাই" class="order-btn">অর্ডার করুন</a></div>
 
-<div class="contact">
-  <h2 class="section-title">অর্ডার করতে যোগাযোগ করুন</h2>
-  <a href="https://wa.me/8801945952533" class="btn">💬 WhatsApp: 01945-952533</a>
-  <a href="tel:01945952533" class="btn call">📞 কল করুন: 01945-952533</a>
-</div>
-
-<footer>
-  <p>© 2026 MD Ainullah Partner MD Sanju. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+    <div class="card">
