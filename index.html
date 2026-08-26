@@ -3,53 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProGame130 - 130+ Games</title>
+<title>ProGame777</title>
 <style>
-* { box-sizing: border-box; }
-body { font-family: 'Arial'; background: linear-gradient(135deg,#667eea,#764ba2); color:white; text-align:center; padding:10px; margin:0; }
-h1 { font-size:24px; margin:10px 0; }
-.box { background: rgba(0,0,0,0.35); padding:15px; border-radius:15px; margin:15px auto; max-width:500px; }
-input, button { padding:12px; margin:6px; border-radius:10px; border:none; width:90%; font-size:16px; }
-button { background:#ff5722; color:white; font-weight:bold; cursor:pointer; }
-button:hover { background:#e64a19; }
-#balance { font-size:22px; font-weight:bold; color:#4CAF50; }
-.game-container { max-height:450px; overflow-y:auto; background:rgba(0,0,0,0.4); border-radius:10px; padding:10px; text-align:left; }
-.game-item { padding:12px; margin:6px; background:#333; border-radius:10px; cursor:pointer; transition:0.3s; font-size:15px; }
-.game-item:hover { background:#ff5722; transform:scale(1.02); }
-.game-item.active { background:#4CAF50; }
-.social-btn { width: 48%; display: inline-block; font-size:14px; margin:3px; }
-.deposit-number { font-size:18px; background:yellow; color:black; padding:10px; border-radius:10px; font-weight:bold; margin:8px; }
-#gameArea { display:none; }
-.back-btn { background:#555; width:50%; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Arial; background:#0a0a1a; color:white; }
+.header { background:#1a1a2e; padding:10px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; }
+.logo { font-size:20px; font-weight:bold; color:#ffcc00; }
+.balance-box { background:#16213e; padding:8px 15px; border-radius:10px; }
+.container { padding:15px; max-width:600px; margin:auto; }
+.card { background:#1a1a2e; padding:15px; border-radius:12px; margin:10px 0; }
+.btn { width:100%; padding:12px; margin:8px 0; border:none; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer; }
+.btn-deposit { background:#00ff88; color:black; }
+.btn-withdraw { background:#ff3366; color:white; }
+.btn-game { background:#2e2e4e; color:white; text-align:left; }
+.deposit-num { background:#ffcc00; color:black; padding:10px; border-radius:8px; font-size:18px; font-weight:bold; margin:5px 0; }
+.game-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 </style>
 </head>
 <body>
 
-<div id="homePage">
-<h1>🔥 ProGame130 🔥</h1>
-<p>130+ গেম একসাথে খেলুন</p>
-
-<div class="box">
-  <h3>💰 Deposit করুন</h3>
-  <p><b>বিকাশ / নগদ / উপায়:</b></p>
-  <p class="deposit-number">01713472942</p>
-  <p><b>রকেট:</b></p>
-  <p class="deposit-number">01945952533</p>
-  <input type="number" id="depositAmount" placeholder="কত টাকা পাঠাইছেন">
-  <button onclick="deposit()">Deposit Request</button>
+<div class="header">
+  <div class="logo">🔥 ProGame777</div>
+  <div class="balance-box">💰 <span id="balance">0</span> Tk</div>
 </div>
 
-<div class="box">
-  <h3>💰 আপনার Balance</h3>
-  <p id="balance">Balance: 0 Tk</p>
-  <input type="number" id="withdrawAmount" placeholder="কত টাকা তুলবেন">
-  <button onclick="withdraw()">Withdraw Request</button>
+<div class="container">
+
+  <div class="card">
+    <h3>💰 Deposit</h3>
+    <p><b>বিকাশ / নগদ / উপায়:</b></p>
+    <p class="deposit-num">01713472942</p>
+    <p><b>রকেট:</b></p>
+    <p class="deposit-num">01945952533</p>
+    <input type="number" id="dAmount" placeholder="Amount" style="width:100%; padding:10px; margin:5px 0; border-radius:8px;">
+    <button class="btn btn-deposit" onclick="deposit()">Deposit Request</button>
+  </div>
+
+  <div class="card">
+    <h3>💸 Withdraw</h3>
+    <input type="number" id="wAmount" placeholder="Withdraw Amount" style="width:100%; padding:10px; margin:5px 0; border-radius:8px;">
+    <button class="btn btn-withdraw" onclick="withdraw()">Withdraw Request</button>
+  </div>
+
+  <div class="card">
+    <h3>🎮 Popular Games</h3>
+    <div class="game-grid" id="gameGrid"></div>
+  </div>
+
 </div>
 
-<div class="box">
-  <h3>🎮 গেম সিলেক্ট করুন</h3>
-  <div class="game-container" id="gameList"></div>
-</div>
+<script>
+let balance = parseFloat(localStorage.getItem('p777_balance')) || 0;
 
-<div class="box">
-  <h3>📢 যোগাযোগ</h3>
+const games = ["Aviator","Crash","Mines","Plinko","Roulette","Blackjack","Slots","Ludo","Cricket","Football","Poker","Dragon Tiger"];
+
+function updateBalance(){
+  document.getElementById('balance').innerText = balance;
+  localStorage.setItem('p777_balance', balance);
+}
+
+function loadGames(){
+  const grid = document.getElementById('gameGrid');
+  games.forEach(g=>{
+    let btn = document.createElement('button');
+    btn.className = 'btn btn-game';
+    btn.innerText = '🎮 ' + g;
+    btn.onclick = ()=> alert(g + ' Game Coming Soon!');
+    grid.appendChild(btn);
+  });
+}
+
+function deposit(){
+  let amt = parseFloat(document.getElementById('dAmount').value);
+  if(amt>0){ balance+=amt; updateBalance(); alert(amt+' Tk Deposit Request Sent!'); document.getElementById('dAmount').value=''; }
+  else alert('Amount লিখুন');
+}
+
+function withdraw(){
+  let amt = parseFloat(document.getElementById('wAmount').value);
+  if(amt>0 && amt<=balance){ balance-=amt; updateBalance(); alert(amt+' Tk Withdraw Request Sent!'); document.getElementById('wAmount').value=''; }
+  else alert('Balance নাই');
+}
+
+window.onload = ()=>{ updateBalance(); loadGames(); }
+</script>
+
+</body>
+</html>
