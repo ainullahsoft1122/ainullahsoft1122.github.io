@@ -13,6 +13,8 @@ button { background:#ff5722; color:white; font-weight:bold; cursor:pointer; }
 button:hover { background:#e64a19; }
 #balance { font-size:20px; font-weight:bold; }
 .game-list { max-height:300px; overflow-y:auto; }
+.social-btn { width: 23%; display: inline-block; font-size:12px; }
+.deposit-number { font-size:18px; background:yellow; color:black; padding:8px; border-radius:10px; font-weight:bold; margin:5px; }
 </style>
 </head>
 <body>
@@ -21,81 +23,5 @@ button:hover { background:#e64a19; }
 <p>130+ গেম একসাথে</p>
 
 <div class="box">
-  <h3>💰 Balance</h3>
-  <p id="balance">Balance: 0 Tk</p>
-  <input type="number" id="depositAmount" placeholder="টাকার পরিমাণ লিখুন">
-  <button onclick="deposit()">Deposit</button>
-</div>
-
-<div class="box">
-  <h3>🎮 গেম সিলেক্ট করুন</h3>
-  <select id="gameList" class="game-list" size="10">
-  </select>
-  <p id="selectedGame">কোনো গেম সিলেক্ট হয়নি</p>
-</div>
-
-<script>
-let balance = 0;
-
-// 130 গেমের লিস্ট
-const games = [
-"1. Aviator","2. Crash","3. Mines","4. Plinko","5. Coin Flip",
-"6. Dice","7. Roulette","8. Blackjack","9. Baccarat","10. Poker",
-"11. Slots","12. Dragon Tiger","13. Teen Patti","14. Andar Bahar",
-"15. Wheel of Fortune","16. Keno","17. Bingo","18. Ludo",
-"19. Carrom","20. Snakes & Ladders","21. 8 Ball Pool","22. Cricket",
-"23. Football","24. Basketball","25. Tennis","26. Racing",
-"27. Shooting","28. Fishing","29. Farming","30. Cooking",
-"31. Puzzle","32. Match 3","33. 2048","34. Sudoku","35. Chess",
-"36. Checkers","37. Backgammon","38. Domino","39. Mahjong","40. Solitaire",
-"41. Spider","42. FreeCell","43. Hearts","44. Spades","45. Uno",
-"46. Memory","47. Bubble Shooter","48. Candy Crush","49. Temple Run","50. Subway Surfers",
-"51. Fruit Ninja","52. Angry Birds","53. Cut the Rope","54. Flappy Bird","55. Piano Tiles",
-"56. 1010!","57. Tetris","58. Pacman","59. Snake","60. Brick Breaker",
-"61. Air Hockey","62. Bowling","63. Golf","64. Darts","65. Billiards",
-"66. Archery","67. Boxing","68. Wrestling","69. MMA","70. Karate",
-"71. Ninja","72. Samurai","73. Zombie","74. Alien","75. Space",
-"76. Galaxy","77. Planet","78. Ocean","79. Jungle","80. Desert",
-"81. Snow","82. Fire","83. Ice","84. Magic","85. Fantasy",
-"86. Adventure","87. Strategy","88. Simulation","89. Racing Pro","90. Flight",
-"91. Train","92. Ship","93. Tank","94. War","95. Battle",
-"96. Survival","97. Horror","98. Mystery","99. Detective","100. Escape",
-"101. Parkour","102. Climbing","103. Jumping","104. Running","105. Swimming",
-"106. Diving","107. Surfing","108. Skiing","109. Skating","110. Cycling",
-"111. Motorbike","112. Car","113. Truck","114. Bus","115. Taxi",
-"116. Police","117. Ambulance","118. Firetruck","119. Helicopter","120. Jet",
-"121. Rocket","122. UFO","123. Robot","124. Monster","125. Dragon",
-"126. Fairy","127. Elf","128. Wizard","129. Knight","130. Aviatrix"
-];
-
-// গেম লিস্ট লোড
-window.onload = function() {
-  const list = document.getElementById('gameList');
-  games.forEach(game => {
-    let option = document.createElement('option');
-    option.text = game;
-    list.add(option);
-  });
-}
-
-// Deposit ফাংশন
-function deposit() {
-  let amount = parseFloat(document.getElementById('depositAmount').value);
-  if(amount > 0) {
-    balance += amount;
-    document.getElementById('balance').innerText = "Balance: " + balance + " Tk";
-    document.getElementById('depositAmount').value = "";
-    alert(amount + " Tk Deposit Success!");
-  } else {
-    alert("সঠিক টাকা লিখুন");
-  }
-}
-
-// গেম সিলেক্ট
-document.getElementById('gameList').onchange = function() {
-  document.getElementById('selectedGame').innerText = "আপনি " + this.value + " খেলছেন";
-}
-</script>
-
-</body>
-</html>
+  <h3>💰 Deposit করুন</h3>
+  <p>নিচের য
