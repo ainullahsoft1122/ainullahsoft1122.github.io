@@ -5,23 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProGame130 - 130+ Games</title>
 <style>
-body { font-family: Arial; background: linear-gradient(135deg,#667eea,#764ba2); color:white; text-align:center; padding:20px; }
-h1 { font-size:28px; }
-.box { background: rgba(0,0,0,0.3); padding:20px; border-radius:15px; margin:15px auto; max-width:400px; }
-input, button, select { padding:10px; margin:5px; border-radius:8px; border:none; width:80%; }
+* { box-sizing: border-box; }
+body { font-family: 'Arial'; background: linear-gradient(135deg,#667eea,#764ba2); color:white; text-align:center; padding:10px; margin:0; }
+h1 { font-size:24px; margin:10px 0; }
+.box { background: rgba(0,0,0,0.35); padding:15px; border-radius:15px; margin:15px auto; max-width:500px; }
+input, button { padding:12px; margin:6px; border-radius:10px; border:none; width:90%; font-size:16px; }
 button { background:#ff5722; color:white; font-weight:bold; cursor:pointer; }
 button:hover { background:#e64a19; }
-#balance { font-size:20px; font-weight:bold; }
-.game-list { max-height:300px; overflow-y:auto; }
-.social-btn { width: 23%; display: inline-block; font-size:12px; }
-.deposit-number { font-size:18px; background:yellow; color:black; padding:8px; border-radius:10px; font-weight:bold; margin:5px; }
+#balance { font-size:22px; font-weight:bold; color:#4CAF50; }
+.game-container { max-height:450px; overflow-y:auto; background:rgba(0,0,0,0.4); border-radius:10px; padding:10px; text-align:left; }
+.game-item { padding:12px; margin:6px; background:#333; border-radius:10px; cursor:pointer; transition:0.3s; font-size:15px; }
+.game-item:hover { background:#ff5722; transform:scale(1.02); }
+.game-item.active { background:#4CAF50; }
+.social-btn { width: 48%; display: inline-block; font-size:14px; margin:3px; }
+.deposit-number { font-size:18px; background:yellow; color:black; padding:10px; border-radius:10px; font-weight:bold; margin:8px; }
+#gameArea { display:none; }
+.back-btn { background:#555; width:50%; }
 </style>
 </head>
 <body>
 
+<div id="homePage">
 <h1>🔥 ProGame130 🔥</h1>
-<p>130+ গেম একসাথে</p>
+<p>130+ গেম একসাথে খেলুন</p>
 
 <div class="box">
   <h3>💰 Deposit করুন</h3>
-  <p>নিচের য
+  <p><b>বিকাশ / নগদ / উপায়:</b></p>
+  <p class="deposit-number">01713472942</p>
+  <p><b>রকেট:</b></p>
+  <p class="deposit-number">01945952533</p>
+  <input type="number" id="depositAmount" placeholder="কত টাকা পাঠাইছেন">
+  <button onclick="deposit()">Deposit Request</button>
+</div>
+
+<div class="box">
+  <h3>💰 আপনার Balance</h3>
+  <p id="balance">Balance: 0 Tk</p>
+  <input type="number" id="withdrawAmount" placeholder="কত টাকা তুলবেন">
+  <button onclick="withdraw()">Withdraw Request</button>
+</div>
+
+<div class="box">
+  <h3>🎮 গেম সিলেক্ট করুন</h3>
+  <div class="game-container" id="gameList"></div>
+</div>
+
+<div class="box">
+  <h3>📢 যোগাযোগ</h3>
