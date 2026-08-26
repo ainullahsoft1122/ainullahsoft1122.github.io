@@ -102,4 +102,51 @@ function toggleAdmin(){
 }
 
 function addBalance(){
-  let amt = parseFloat(document.get
+  let amt = parseFloat(document.get<!-- FAKE AVIATOR GAME START -->
+<div id="games" class="card" style="display:none;">
+  <div class="title">✈️ Fake Aviator Game</div>
+  <div id="aviator" style="background:#000; height:250px; position:relative; overflow:hidden; border-radius:10px; margin-bottom:10px;">
+    <div id="plane" style="position:absolute; bottom:20px; left:20px; font-size:30px; transition: all 0.1s linear;">✈️</div>
+    <div id="multiplier" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:40px; font-weight:bold; color:#00ff88;">1.00x</div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+    <input type="number" id="betAmt" placeholder="Bet Amount" value="100" style="width:100%; padding:12px; background:#1e1e40; border:1px solid #2e2e60; border-radius:8px; color:#fff;">
+    <button id="betBtn" class="btn btn-green" onclick="startGame()">Bet & Start</button>
+  </div>
+  <button id="cashBtn" class="btn btn-red" style="display:none; margin-top:10px;" onclick="cashOut()">Cash Out</button>
+</div>
+
+<script>
+let gameRunning = false; let multiplier = 1.00; let crashPoint = 0; let interval; let currentBet = 0;
+
+function startGame(){
+  currentBet = parseFloat(document.getElementById('betAmt').value);
+  if(currentBet<=0 || currentBet>bal){ alert('Coin নাই'); return; }
+  bal-=currentBet; upd();
+  gameRunning=true; multiplier=1.00; crashPoint=(Math.random()*8+1.2).toFixed(2);
+  document.getElementById('betBtn').style.display='none'; document.getElementById('cashBtn').style.display='block';
+  document.getElementById('plane').innerText='✈️';
+  
+  interval=setInterval(()=>{
+    multiplier+=0.02;
+    document.getElementById('multiplier').innerText=multiplier.toFixed(2)+'x';
+    document.getElementById('plane').style.bottom=(20+multiplier*15)+'px';
+    document.getElementById('plane').style.left=(20+multiplier*10)+'px';
+    if(multiplier>=crashPoint){
+      clearInterval(interval); gameRunning=false;
+      document.getElementById('multiplier').innerText='CRASHED! 💥';
+      document.getElementById('betBtn').style.display='block'; document.getElementById('cashBtn').style.display='none';
+    }
+  },50);
+}
+
+function cashOut(){
+  if(!gameRunning) return;
+  clearInterval(interval); gameRunning=false;
+  let win = currentBet*multiplier;
+  bal+=win; upd();
+  alert('Cash Out! '+win.toFixed(0)+' Coin Win');
+  document.getElementById('betBtn').style.display='block'; document.getElementById('cashBtn').style.display='none';
+}
+</script>
+<!-- FAKE AVIATOR GAME END -->
