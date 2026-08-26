@@ -3,128 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProGame777</title>
+<title>Digital Service Hub</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
-body { background:#0a0a1a; color:#fff; padding-bottom:70px; }
-.login-box { max-width:400px; margin:50px auto; background:#151530; padding:20px; border-radius:12px; }
-input { width:100%; padding:12px; background:#1e1e40; border:1px solid #2e2e60; border-radius:8px; color:#fff; margin:8px 0; }
-.btn { width:100%; padding:14px; border:none; border-radius:8px; font-weight:bold; font-size:16px; cursor:pointer; background:#FFD700; color:#000; margin:5px 0; }
-.header { background:#151530; padding:12px 15px; display:flex; justify-content:space-between; position:sticky; top:0; z-index:99; }
-.bal { background:#1e1e40; padding:8px 15px; border-radius:20px; color:#00ff88; font-weight:bold; }
-.container { padding:12px; max-width:700px; margin:auto; }
-.card { background:#151530; border-radius:12px; padding:15px; margin:12px 0; }
-.title { color:#FFD700; font-size:18px; margin-bottom:10px; font-weight:bold; }
-.num { background:#FFD700; color:#000; padding:12px; border-radius:8px; font-size:18px; font-weight:bold; text-align:center; margin:8px 0; }
-.game-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-.game-box { background:#1e1e40; padding:15px; border-radius:10px; text-align:center; cursor:pointer; transition:0.2s; }
-.game-box:hover { background:#2e2e60; }
-.bottom-nav { position:fixed; bottom:0; left:0; right:0; background:#151530; display:flex; justify-content:space-around; padding:10px 0; border-top:1px solid #2e2e60; }
-.nav-btn { text-align:center; color:#888; font-size:11px; cursor:pointer; }
-.nav-btn.active { color:#FFD700; }
+  body{font-family:Arial; margin:0; background:#f4f4f4; color:#333;}
+  header{background:#0d47a1; color:white; text-align:center; padding:20px;}
+  header h1{margin:0; font-size:28px;}
+  header p{margin:5px 0;}
+  .container{max-width:1100px; margin:auto; padding:20px;}
+  .services{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px;}
+  .card{background:white; padding:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  .card h3{color:#0d47a1; margin-top:0;}
+  .price{font-weight:bold; color:green;}
+  .deposit{background:#ffeb3b; padding:20px; border-radius:10px; text-align:center; margin:20px 0;}
+  .btn{background:#25D366; color:white; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; font-size:16px; font-weight:bold;}
+  footer{background:#222; color:white; text-align:center; padding:15px; margin-top:20px;}
 </style>
 </head>
 <body>
 
-<!-- LOGIN / REGISTER PAGE -->
-<div id="loginPage" class="login-box">
-  <h2 style="text-align:center; color:#FFD700; margin-bottom:15px;">🔥 ProGame777</h2>
-  <input type="text" id="username" placeholder="Username দিন">
-  <input type="password" id="password" placeholder="Password দিন">
-  <button class="btn" onclick="login()">Login / Register</button>
-  <p style="font-size:12px; color:#aaa; text-align:center; margin-top:10px;">নতুন হলে Auto Account হবে। Balance: 0 Coin</p>
-</div>
-
-<!-- MAIN APP -->
-<div id="app" style="display:none;">
-<div class="header">
-  <div style="color:#FFD700; font-size:18px;">🔥 ProGame777</div>
-  <div class="bal">🪙 <span id="bal">0</span></div>
-</div>
+<header>
+  <h1>Digital Service Hub</h1>
+  <p><b>Site Owner:</b> MD AINUL</p>
+  <p><b>Partner:</b> MD SANJU</p>
+</header>
 
 <div class="container">
-  <!-- HOME / ALL GAMES -->
-  <div id="home" class="card">
-    <div class="title">🎮 All Games</div>
-    <div class="game-grid" id="gameGrid"></div>
+  <h2>আমাদের সার্ভিস সমূহ - 15 টি</h2>
+  <div class="services">
+    <div class="card"><h3>1. Website Development</h3><p>যেকোনো ধরনের ওয়েবসাইট</p><p class="price">৫০০০ টাকা</p></div>
+    <div class="card"><h3>2. Mobile App Development</h3><p>Android/iOS App</p><p class="price">৬০০০ টাকা</p></div>
+    <div class="card"><h3>3. Logo & Banner Design</h3><p>প্রফেশনাল ডিজাইন</p><p class="price">২০০০ টাকা</p></div>
+    <div class="card"><h3>4. Facebook Page Setup</h3><p>বিজনেস পেজ সেটআপ</p><p class="price">১৫০ টাকা</p></div>
+    <div class="card"><h3>5. Video Editing</h3><p>Pro Level Editing</p><p class="price">৩০০০ টাকা</p></div>
+    <div class="card"><h3>6. Digital Marketing</h3><p>Facebook Ads</p><p class="price">৪০০ টাকা</p></div>
+    <div class="card"><h3>7. Paper Business App</h3><p>কাগজের বিজনেসের জন্য অ্যাপ</p><p class="price">৫০ টাকা</p></div>
+    <div class="card"><h3>8. E-commerce Website</h3><p>অনলাইন দোকান</p><p class="price">৭০০০ টাকা</p></div>
+    <div class="card"><h3>9. SEO Service</h3><p>Google এ 1st পেজ</p><p class="price">৩৫০০ টাকা</p></div>
+    <div class="card"><h3>10. Content Writing</h3><p>Bangla/English</p><p class="price">১০০০ টাকা</p></div>
+    <div class="card"><h3>11. UI/UX Design</h3><p>App & Website Design</p><p class="price">৪০০০ টাকা</p></div>
+    <div class="card"><h3>12. Social Media Management</h3><p>Page Handle</p><p class="price">২৫০০ টাকা</p></div>
+    <div class="card"><h3>13. Domain & Hosting</h3><p>১ বছরের জন্য</p><p class="price">১৮০০ টাকা</p></div>
+    <div class="card"><h3>14. Software Development</h3><p>Custom Software</p><p class="price">৮০০০ টাকা</p></div>
+    <div class="card"><h3>15. Tech Support</h3><p>24/7 Support</p><p class="price">২০০০ টাকা</p></div>
   </div>
 
-  <!-- DEPOSIT -->
-  <div id="deposit" class="card" style="display:none;">
-    <div class="title">🪙 Deposit - Coin নিন</div>
-    <p>বিকাশ / নগদ / উপায়</p>
-    <div class="num">01713472942</div>
-    <p>রকেট</p>
-    <div class="num">01945952533</div>
-    <input type="number" id="dAmt" placeholder="কত Coin লাগবে">
-    <button class="btn" onclick="dep()">Deposit Request পাঠান</button>
-    <p style="font-size:12px; color:#aaa; margin-top:10px;">টাকা পাঠিয়ে আমাকে WhatsApp দিন। আমি Approve করলে Coin Add হবে</p>
-  </div>
-
-  <!-- ADMIN -->
-  <div id="admin" class="card" style="display:none; border:2px dashed #FFD700;">
-    <div class="title">👑 Admin Panel</div>
-    <input type="text" id="uName" placeholder="Username লিখুন">
-    <input type="number" id="aAmt" placeholder="Coin Amount">
-    <button class="btn" style="background:#00c851;" onclick="add()">+ Add Coin</button>
-    <button class="btn" style="background:#ff4444;" onclick="cut()">- Cut Coin</button>
+  <div class="deposit">
+    <h2>অ্যাপস বানাতে চান?</h2>
+    <p>যদি অ্যাপস বানাতে চান তাহলে MD AINUL ভাইয়ের সাথে যোগাযোগ করুন</p>
+    <p><b>৫০ টাকা দিয়ে ফর্ম ফিলাপ করুন</b></p>
+    <button class="btn" onclick="window.open('https://wa.me/8801945952533')">WhatsApp: 01945952533</button>
   </div>
 </div>
 
-<div class="bottom-nav">
-  <div class="nav-btn active" onclick="tab('home')">🎮<br>Games</div>
-  <div class="nav-btn" onclick="tab('deposit')">🪙<br>Deposit</div>
-  <div class="nav-btn" onclick="admin()">👑<br>Admin</div>
-</div>
-</div>
-
-<script>
-let currentUser = ''; let bal = 0;
-let users = JSON.parse(localStorage.getItem('users')) || {};
-
-// r777 এর মতো 15টা গেম
-const allGames = [
-{name:"Aviator", icon:"✈️"}, {name:"Crash", icon:"💥"}, {name:"Mines", icon:"💣"},
-{name:"Plinko", icon:"🔮"}, {name:"Dice", icon:"🎲"}, {name:"Roulette", icon:"🎰"},
-{name:"Dragon Tiger", icon:"🐉"}, {name:"Color Game", icon:"🎨"}, {name:"Coin Flip", icon:"🪙"},
-{name:"Ludo", icon:"🎯"}, {name:"Slots", icon:"🍒"}, {name:"Poker", icon:"♠️"},
-{name:"Baccarat", icon:"🃏"}, {name:"Blackjack", icon:"♣️"}, {name:"Wheel", icon:"🎡"}
-];
-
-function login(){
-  let u=document.getElementById('username').value; let p=document.getElementById('password').value;
-  if(u==''||p==''){alert('Username Password দিন');return;}
-  if(!users[u]){ users[u]={pass:p,bal:0}; alert('নতুন Account তৈরি হলো!'); }
-  if(users[u].pass!=p){alert('Password ভুল');return;}
-  currentUser=u; bal=users[u].bal;
-  document.getElementById('loginPage').style.display='none';
-  document.getElementById('app').style.display='block';
-  loadGames(); upd();
-}
-
-function save(){ users[currentUser].bal=bal; localStorage.setItem('users',JSON.stringify(users)); }
-function upd(){ document.getElementById('bal').innerText=bal; save(); }
-function tab(id){ document.querySelectorAll('.card').forEach(c=>c.style.display='none'); document.getElementById(id).style.display='block'; document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active')); event.currentTarget.classList.add('active'); }
-function admin(){ tab('admin'); }
-
-function dep(){
-  let a=parseFloat(document.getElementById('dAmt').value);
-  if(a>0){ alert(a+' Coin Request Sent!\\n\\n01713472942 এ টাকা পাঠিয়ে আমাকে কল দিন'); document.getElementById('dAmt').value=''; }
-}
-
-function add(){
-  let u=document.getElementById('uName').value; let a=parseFloat(document.getElementById('aAmt').value);
-  if(users[u]){ users[u].bal+=a; alert(u+' কে '+a+' Coin দেওয়া হলো'); if(u==currentUser){bal=users[u].bal; upd();} }
-  else{alert('User পাওয়া যায়নি')}
-}
-function cut(){ let u=document.getElementById('uName').value; let a=parseFloat(document.getElementById('aAmt').value); if(users[u]&&users[u].bal>=a){ users[u].bal-=a; alert(u+' থেকে '+a+' Coin কাটা হলো'); if(u==currentUser){bal=users[u].bal; upd();} } }
-
-function loadGames(){
-  let g='';
-  allGames.forEach(x=>g+=`<div class="game-box" onclick="alert('${x.name}\\n\\nএটা Demo Game\\nCoin Add করে খেলুন')"><div style="font-size:30px">${x.icon}</div>${x.name}</div>`);
-  document.getElementById('gameGrid').innerHTML=g;
-}
-</script>
+<footer>
+  <p>© 2026 Digital Service Hub | Owner: MD AINUL | Partner: MD SANJU | Contact: 01945952533</p>
+</footer>
 
 </body>
 </html>
