@@ -1,100 +1,77 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MD Ainullah Partner MD Sanju - Digital Service</title>
+<title>CK TRIPLE NINE</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'SolaimanLipi', 'Segoe UI', sans-serif;}
-  body{background:#0f172a;color:#fff;}
-  .hero{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);padding:60px 20px;text-align:center;}
-  .logo-circle{width:100px;height:100px;background:#fff;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:900;color:#6366f1;}
-  .hero h1{font-size:30px;font-weight:900;}
-  .hero h2{font-size:20px;color:#e0e7ff;margin:8px 0;}
-  .hero p{font-size:15px;}
-  .container{max-width:1100px;margin:50px auto;padding:0 20px;}
-  .section-title{text-align:center;font-size:28px;margin-bottom:40px;color:#a5b4fc;font-weight:800;}
-  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;}
-  .card{background:#1e293b;border:1px solid #334155;border-radius:18px;padding:25px;transition:0.3s;}
-  .card:hover{transform:translateY(-5px);border-color:#8b5cf6;box-shadow:0 0 20px #8b5cf640;}
-  .icon{font-size:40px;margin-bottom:15px;}
-  .card h3{font-size:20px;color:#a5b4fc;margin-bottom:12px;}
-  .card p{font-size:14px;color:#cbd5e1;line-height:1.8;margin-bottom:15px;}
-  .benefit{font-size:13px;color:#86efac;margin-bottom:15px;font-weight:700;}
-  .order-btn{display:block;width:100%;padding:14px;background:linear-gradient(90deg,#25D366,#20ba5a);color:#fff;text-decoration:none;border-radius:12px;font-size:16px;font-weight:800;text-align:center;}
-  .order-btn:hover{opacity:0.9;transform:scale(1.02);}
-  .contact{text-align:center;padding:50px 20px;background:#1e293b;margin-top:50px;}
-  .main-btn{display:block;width:90%;max-width:400px;margin:12px auto;padding:17px;background:linear-gradient(90deg,#6366f1,#8b5cf6);color:#fff;text-decoration:none;border-radius:14px;font-size:18px;font-weight:800;}
-  footer{text-align:center;padding:30px;color:#64748b;font-size:14px;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0a0a0a;color:white}
+header{background:linear-gradient(90deg,#ff0000,#8b0000);padding:15px;text-align:center;position:sticky;top:0;border-bottom:2px solid #ffd700}
+header h1{font-size:22px;color:#ffd700;letter-spacing:2px}
+.balance{background:#1a1a1a;padding:12px;margin:10px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;border:1px solid #333}
+.btn-deposit{background:linear-gradient(90deg,#25D366,#0d6efd);padding:8px 15px;border-radius:5px;text-decoration:none;color:white;font-weight:bold;font-size:13px}
+.container{padding:15px;max-width:1200px;margin:auto}
+.section-title{font-size:16px;margin:15px 0 10px;color:#ffd700;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.card{background:#1a1a1a;border-radius:10px;padding:10px;text-align:center;border:1px solid #333}
+.card:hover{border-color:#ff0000;transform:scale(1.03)}
+.card-img{width:100%;height:70px;background:linear-gradient(135deg,#0d6efd,#6610f2);border-radius:8px;margin-bottom:6px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.card h3{font-size:12px;color:#fff;margin-bottom:4px}
+.btn{display:block;padding:6px;background:linear-gradient(90deg,#ff0000,#8b0000);color:white;text-decoration:none;border-radius:5px;font-size:11px;font-weight:bold}
+.payment-box{background:#1a1a1a;padding:15px;border-radius:10px;margin:15px 0;border:1px solid #ff0000}
+.payment-number{background:#222;padding:10px;border-radius:5px;display:flex;justify-content:space-between}
+.copy-btn{background:#ff0000;color:white;border:none;padding:5px 10px;border-radius:4px;font-size:11px}
+@media(max-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="logo-circle">DS</div>
-  <h1>MD Ainullah Partner</h1>
-  <h2>MD Sanju</h2>
-  <p>Digital Service Agency - 2026</p>
+<header>
+  <h1>CK TRIPLE NINE</h1>
+</header>
+
+<div class="balance">
+  <div><div style="font-size:12px;color:#aaa">Balance</div><div style="font-size:18px;font-weight:bold;color:#ffd700">0.00 BDT</div></div>
+  <a class="btn-deposit" href="#deposit">+ Deposit</a>
 </div>
 
 <div class="container">
-  <h2 class="section-title">আমাদের ২০ টি প্রিমিয়াম সার্ভিস</h2>
-  <div class="services">
+  <div class="section-title">🎮 ALL SERVICES</div>
+  <div class="grid">
+
+    <!-- এখানে 200+ কার্ড বসাতে পারবেন। আমি 30টা sample দিলাম -->
+    <div class="card"><div class="card-img">📱</div><h3>App Dev</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🎨</div><h3>App Design</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🌐</div><h3>Website</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🛒</div><h3>E-commerce</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">💼</div><h3>Business</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">📢</div><h3>Marketing</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">📄</div><h3>FB Page</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">⭐</div><h3>FB Star</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🖼️</div><h3>Logo</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">📸</div><h3>Banner</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">✂️</div><h3>Photo Edit</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🎬</div><h3>Video Edit</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🖼️</div><h3>Thumbnail</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🌍</div><h3>Domain</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <div class="card"><div class="card-img">🛠️</div><h3>IT Support</h3><a class="btn" href="https://wa.me/8801945952533">Order</a></div>
+    <!-- 185 টা কার্ড এখানে কপি করে বাড়াতে পারবেন -->
     
-    <div class="card"><div class="icon">📱</div><h3>1. Android App Development</h3><p><b>কি কাজ:</b> ব্যবসার জন্য Play Store অ্যাপ, E-commerce অ্যাপ</p><p class="benefit"><b>লাভ:</b> কাস্টমার সরাসরি অ্যাপ থেকে অর্ডার দিবে। ব্র্যান্ড ভ্যালু ১০ গুণ বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি Android App বানাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🌐</div><h3>2. Website Design</h3><p><b>কি কাজ:</b> Business, E-commerce, Portfolio, Landing Page</p><p class="benefit"><b>লাভ:</b> Google এ পাওয়া যাবে। 24 ঘন্টা সেল। বিশ্বাসযোগ্যতা বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি Website বানাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🎨</div><h3>3. Logo & Branding Design</h3><p><b>কি কাজ:</b> প্রিমিয়াম লোগো, ব্র্যান্ড কিট, ভিজিটিং কার্ড</p><p class="benefit"><b>লাভ:</b> মানুষ ব্র্যান্ড মনে রাখবে। প্রফেশনাল লুক পাবেন।</p><a href="https://wa.me/8801945952533?text=আমি Logo ডিজাইন করাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🖼️</div><h3>4. Social Media Post Design</h3><p><b>কি কাজ:</b> Facebook, Instagram এর জন্য আকর্ষণীয় পোস্ট</p><p class="benefit"><b>লাভ:</b> পোস্টে বেশি Like, Comment, Share পাবেন। সেল বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি Post Design করাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">📸</div><h3>5. Photo Editing & Manipulation</h3><p><b>কি কাজ:</b> প্রোডাক্ট ফটো, প্রোফাইল ফটো প্রফেশনাল এডিট</p><p class="benefit"><b>লাভ:</b> প্রোডাক্ট দেখতে সুন্দর লাগবে। কাস্টমার বেশি আকৃষ্ট হবে।</p><a href="https://wa.me/8801945952533?text=আমি Photo Edit করাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🎬</div><h3>6. Video Editing</h3><p><b>কি কাজ:</b> Reels, Shorts, YouTube, Ad Video এডিট</p><p class="benefit"><b>লাভ:</b> ভিডিও ভাইরাল হবে। চ্যানেল দ্রুত Grow করবে।</p><a href="https://wa.me/8801945952533?text=আমি Video Edit করাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🚀</div><h3>7. Facebook Page Boost</h3><p><b>কি কাজ:</b> Real Follower, Like, Reach, Comment বাড়ানো</p><p class="benefit"><b>লাভ:</b> প্রোডাক্ট দ্রুত সেল। পেজ বড় হবে। অর্গানিক রিচ বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি FB Boost করতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">📈</div><h3>8. TikTok/Instagram Promotion</h3><p><b>কি কাজ:</b> ভিডিও ভাইরাল, Follower Growth, Engagement</p><p class="benefit"><b>লাভ:</b> কম সময়ে বেশি মানুষ। ব্র্যান্ড ভাইরাল হবে।</p><a href="https://wa.me/8801945952533?text=আমি TikTok Promotion চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">📢</div><h3>9. Facebook & Google Ads</h3><p><b>কি কাজ:</b> কম বাজেটে বেশি সেল আনার Ads Campaign</p><p class="benefit"><b>লাভ:</b> ১০ টাকায় ১০ টাকার সেল। টার্গেটেড কাস্টমার পাবেন।</p><a href="https://wa.me/8801945952533?text=আমি Ads চালাতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🔍</div><h3>10. SEO Service</h3><p><b>কি কাজ:</b> Google এ ওয়েবসাইট 1 নাম্বারে আনা</p><p class="benefit"><b>লাভ:</b> Ads ছাড়া ফ্রি কাস্টমার। প্রতিদিন সেল বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি SEO সার্ভিস নিতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🛡️</div><h3>11. Page & ID Recovery</h3><p><b>কি কাজ:</b> Hack বা Disabled Facebook Page/ID ফেরত</p><p class="benefit"><b>লাভ:</b> বছরের পরিশ্রম বেঁচে যাবে। ব্যবসা সেফ থাকবে।</p><a href="https://wa.me/8801945952533?text=আমার Page Recover করতে হবে" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">⭐</div><h3>12. Facebook Star & Monetization</h3><p><b>কি কাজ:</b> Page Monetization, Star Setup, Eligibility</p><p class="benefit"><b>লাভ:</b> ভিডিও থেকে সরাসরি ইনকাম। মাসে ডলার আয়।</p><a href="https://wa.me/8801945952533?text=আমি Star Setup করতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🤖</div><h3>13. Chatbot Setup</h3><p><b>কি কাজ:</b> Messenger & WhatsApp Auto Reply Bot</p><p class="benefit"><b>লাভ:</b> 24 ঘন্টা রিপ্লাই। সময় বাঁচবে। সেল মিস হবে না।</p><a href="https://wa.me/8801945952533?text=আমি Chatbot সেটআপ চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">💻</div><h3>14. UI/UX Design</h3><p><b>কি কাজ:</b> App ও Website এর সুন্দর ইউজার ডিজাইন</p><p class="benefit"><b>লাভ:</b> কাস্টমার বেশি সময় থাকবে। অর্ডার ৩ গুণ বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি UI/UX ডিজাইন চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">📊</div><h3>15. Business Page Setup</h3><p><b>কি কাজ:</b> প্রফেশনাল Facebook Business Page</p><p class="benefit"><b>লাভ:</b> Ads চালানো যাবে। ইনসাইট দেখে সেল বাড়ানো যাবে।</p><a href="https://wa.me/8801945952533?text=আমি Business Page সেটআপ চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">💳</div><h3>16. Payment Gateway</h3><p><b>কি কাজ:</b> Website এ bkash, Nagad, Card Payment</p><p class="benefit"><b>লাভ:</b> কাস্টমার সহজে পেমেন্ট করবে। সেল ৫ গুণ বাড়বে।</p><a href="https://wa.me/8801945952533?text=আমি Payment Gateway চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">☁️</div><h3>17. Hosting & Domain</h3><p><b>কি কাজ:</b> সাশ্রয়ী দামে Fast Hosting ও Domain</p><p class="benefit"><b>লাভ:</b> ওয়েবসাইট 24 ঘন্টা ফাস্ট। কখনো বন্ধ হবে না।</p><a href="https://wa.me/8801945952533?text=আমি Hosting Domain নিতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">📝</div><h3>18. Content Writing</h3><p><b>কি কাজ:</b> Website, Blog, Facebook Post লেখা</p><p class="benefit"><b>লাভ:</b> SEO হবে। মানুষ পড়ে প্রোডাক্ট কিনবে।</p><a href="https://wa.me/8801945952533?text=আমি Content Writing চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">🛒</div><h3>19. E-commerce Store Setup</h3><p><b>কি কাজ:</b> Shopify, WooCommerce ফুল দোকান বানানো</p><p class="benefit"><b>লাভ:</b> অনলাইন দোকান। ঘরে বসে সারা দেশে সেল।</p><a href="https://wa.me/8801945952533?text=আমি E-commerce Store চাই" class="order-btn">অর্ডার করুন</a></div>
-
-    <div class="card"><div class="icon">⭐</div><h3>20. 24/7 Support & Training</h3><p><b>কি কাজ:</b> যেকোনো সমস্যায় সাপোর্ট ও কাজ শিখানো</p><p class="benefit"><b>লাভ:</b> কাজ শিখে নিজেই ইনকাম। আমরা সবসময় পাশে।</p><a href="https://wa.me/8801945952533?text=আমি Training নিতে চাই" class="order-btn">অর্ডার করুন</a></div>
-
   </div>
-</div>
 
-<div class="contact">
-  <h2 class="section-title">সরাসরি যোগাযোগ করুন</h2>
-  <a href="https://wa.me/8801945952533" class="main-btn">💬 WhatsApp: 01945-952533</a>
-  <a href="tel:01945952533" class="main-btn">📞 কল করুন: 01945-952533</a>
-  <p style="margin-top:20px;color:#94a3b8;">২৪ ঘন্টা সাপোর্ট পাবেন</p>
+  <div id="deposit" class="section-title">💰 DEPOSIT</div>
+  <div class="payment-box">
+    <h4 style="color:#ffd700;margin-bottom:10px">Rocket / Upay</h4>
+    <div class="payment-number">
+      <span>01713472942</span>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('01713472942')">Copy</button>
+    </div>
+    <p style="font-size:11px;color:#aaa;margin-top:8px">পেমেন্ট করে WhatsApp এ SS দিন</p>
+  </div>
+  
+  <a class="btn" href="https://wa.me/8801945952533" style="text-align:center;background:linear-gradient(90deg,#25D366,#0d6efd)">Support: 01945952533</a>
 </div>
-
-<footer>
-  <p>© 2026 MD Ainullah Partner MD Sanju. All Rights Reserved.</p>
-  <p>বিশ্বাসে আমরা, সেবায় আমরা</p>
-</footer>
 
 </body>
 </html>
